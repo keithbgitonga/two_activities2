@@ -25,11 +25,22 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onCreate");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mMessageEditText = (EditText) findViewById(R.id.editText_main);
         mReplyHeadTextView = (TextView) findViewById(R.id.text_header_reply);
         mReplyTextView = (TextView) findViewById(R.id.text_message_reply);
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        Log.d(LOG_TAG, "onStart");
     }
 
     public void launchSecondActivity(View view) {
